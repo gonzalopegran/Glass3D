@@ -1,0 +1,11 @@
+<RCC>
+    <qresource prefix="/">
+        <file>logo_glass3d.ico</file>
+        <file>iconos/abrir.png</file>
+        <file>iconos/cerrar.png</file>
+        <file>iconos/info.png</file>
+        <file>iconos/pdf.png</file>
+        <file>iconos/preferencias.png</file>
+        <file>iconos/reiniciar.png</file>
+    </qresource>
+</RCC>

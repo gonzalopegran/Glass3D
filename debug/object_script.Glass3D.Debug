@@ -1,0 +1,14 @@
+debug/consecutiveraycaster.o
+debug/custom3dwindow.o
+debug/customcameracontroller.o
+debug/main.o
+debug/mainwindow.o
+debug/raycasthandler.o
+debug/settings.o
+debug/qrc_Recursos.o
+debug/moc_consecutiveraycaster.o
+debug/moc_custom3dwindow.o
+debug/moc_customcameracontroller.o
+debug/moc_mainwindow.o
+debug/moc_raycasthandler.o
+debug/moc_settings.o
