@@ -95,6 +95,7 @@ void MainWindow::new3DWindow()
 
     window->createScene();
 
+    // Conexiones de las señales
     connect(window, SIGNAL(sendMessageBox(QString)),        this,               SLOT(messageBox(QString)));
     connect(window, SIGNAL(setCenterPointText(QString)),    this,               SLOT(centerPointTextChanged(QString)));
     connect(window, SIGNAL(setInfoStep2(QString)),          this,               SLOT(infoStep2Changed(QString)));

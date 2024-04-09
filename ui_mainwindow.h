@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'mainwindow.ui'
 **
-** Created by: Qt User Interface Compiler version 6.5.0
+** Created by: Qt User Interface Compiler version 6.7.0
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -242,8 +242,8 @@ public:
         line = new QFrame(Step2);
         line->setObjectName("line");
         line->setGeometry(QRect(250, 0, 20, 81));
-        line->setFrameShape(QFrame::VLine);
-        line->setFrameShadow(QFrame::Sunken);
+        line->setFrameShape(QFrame::Shape::VLine);
+        line->setFrameShadow(QFrame::Shadow::Sunken);
         comboBoxDirection = new QComboBox(Step2);
         comboBoxDirection->addItem(QString());
         comboBoxDirection->addItem(QString());
@@ -258,13 +258,13 @@ public:
         line_2 = new QFrame(Step2);
         line_2->setObjectName("line_2");
         line_2->setGeometry(QRect(520, 0, 20, 91));
-        line_2->setFrameShape(QFrame::VLine);
-        line_2->setFrameShadow(QFrame::Sunken);
+        line_2->setFrameShape(QFrame::Shape::VLine);
+        line_2->setFrameShadow(QFrame::Shadow::Sunken);
         line_3 = new QFrame(Step2);
         line_3->setObjectName("line_3");
         line_3->setGeometry(QRect(860, -10, 20, 91));
-        line_3->setFrameShape(QFrame::VLine);
-        line_3->setFrameShadow(QFrame::Sunken);
+        line_3->setFrameShape(QFrame::Shape::VLine);
+        line_3->setFrameShadow(QFrame::Shadow::Sunken);
         tabSteps->addTab(Step2, QString());
         Step3 = new QWidget();
         Step3->setObjectName("Step3");
@@ -312,7 +312,7 @@ public:
         MainWindow->setStatusBar(statusbar);
         toolBar = new QToolBar(MainWindow);
         toolBar->setObjectName("toolBar");
-        MainWindow->addToolBar(Qt::TopToolBarArea, toolBar);
+        MainWindow->addToolBar(Qt::ToolBarArea::TopToolBarArea, toolBar);
         QWidget::setTabOrder(pushButtonNext1, comboBoxDirection);
         QWidget::setTabOrder(comboBoxDirection, pushButtonGenerate2);
         QWidget::setTabOrder(pushButtonGenerate2, doubleSpinBoxWidth);

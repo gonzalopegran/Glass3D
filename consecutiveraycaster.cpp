@@ -20,6 +20,7 @@ ConsecutiveRayCaster::ConsecutiveRayCaster(Qt3DCore::QEntity *scene, TimeDelaySt
     m_center = center;
 }
 
+// Destructor
 ConsecutiveRayCaster::~ConsecutiveRayCaster()
 {
     if (m_rayCastHandler) {
@@ -32,6 +33,23 @@ ConsecutiveRayCaster::~ConsecutiveRayCaster()
     }
 }
 
+//#############################
+//###                       ###
+//###   GETTERS + SETTERS   ###
+//###                       ###
+//#############################
+
+RayCastHandler* ConsecutiveRayCaster::rayCastHandler() const { return m_rayCastHandler; }
+void ConsecutiveRayCaster::setHalfDirection(char newHalfDirection) { m_halfDirection = newHalfDirection; }
+
+
+//#####################
+//###               ###
+//###   FUNCTIONS   ###
+//###               ###
+//#####################
+
+// Función que inicia el escano de colisiones por trazado de rayos en forma circular.
 void ConsecutiveRayCaster::runRayCastTests()
 {
     m_rayTests->clear();
@@ -53,6 +71,8 @@ void ConsecutiveRayCaster::runRayCastTests()
     m_rayCastHandler->runTests(m_rayTests);
 }
 
+// Función que inicia el escano de colisiones por trazado de rayos en forma circular pero solo escaneando media circunferencia.
+// TO_DO: Podría simplificarse llamando a la función runRayCastTests() con un parámetro que le indique la dirección.
 void ConsecutiveRayCaster::runHalfRayCastTests()
 {
     m_rayTests->clear();
@@ -79,6 +99,7 @@ void ConsecutiveRayCaster::runHalfRayCastTests()
     m_rayCastHandler->runTests(m_rayTests);
 }
 
+// Función que finaliza el escaneo de colisiones y emite la señales que se comunican con la GUI.
 void ConsecutiveRayCaster::handleFinish(const QVector<HitPoint> collisions)
 {
     for (HitPoint collision : collisions) {
@@ -88,19 +109,10 @@ void ConsecutiveRayCaster::handleFinish(const QVector<HitPoint> collisions)
     }
 
     qDebug() << __func__ << "Finished: all ray-cast collisions are logged.";
+
     emit rayCasterProgressBar(100);
     emit rayCastingFinished();
 
-}
-
-RayCastHandler *ConsecutiveRayCaster::rayCastHandler() const
-{
-    return m_rayCastHandler;
-}
-
-void ConsecutiveRayCaster::setHalfDirection(char newHalfDirection)
-{
-    m_halfDirection = newHalfDirection;
 }
 
 void ConsecutiveRayCaster::emitRayCasterProgressBar(int n)
