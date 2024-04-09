@@ -1,6 +1,6 @@
 #include <windows.h>
 
-IDI_ICON1	ICON	"C:\\Users\\gonza\\OneDrive - UVa\\UVa\\TFG\\Glass3D\\Glass3D\\logo_glass3d.ico"
+IDI_ICON1	ICON	"C:\\Users\\User\\Repositorio\\Glass3D\\logo_glass3d.ico"
 
 VS_VERSION_INFO VERSIONINFO
 	FILEVERSION 0,0,0,0

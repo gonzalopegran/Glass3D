@@ -2,6 +2,12 @@
 #include "ui_settings.h"
 #include <QFile>
 
+//#######################
+//###                 ###
+//###   CONSTRUCTOR   ###
+//###                 ###
+//#######################
+
 Settings::Settings(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::Settings)
@@ -24,11 +30,19 @@ Settings::Settings(QWidget *parent) :
     }
 }
 
+// Destructor de la clase
 Settings::~Settings()
 {
     delete ui;
 }
 
+//#####################
+//###               ###
+//###   FUNCTIONS   ###
+//###               ###
+//#####################
+
+// Función que guarda los ajustes en el archivo .ini
 void Settings::saveSettings() {
     QSettings settings("cfg_Glass3D.ini",QSettings::Format::IniFormat);
 
@@ -47,6 +61,7 @@ void Settings::saveSettings() {
     emit changed();
 }
 
+// Función que restablece los valores por defecto en la UI de los settings
 void Settings::setDefaultValues() {
     ui->doubleSpinBoxWidth->setValue(1.5);
     ui->comboBoxDirection->setCurrentIndex(0);
