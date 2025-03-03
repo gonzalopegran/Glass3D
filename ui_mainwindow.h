@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'mainwindow.ui'
 **
-** Created by: Qt User Interface Compiler version 6.7.0
+** Created by: Qt User Interface Compiler version 6.7.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -125,16 +125,16 @@ public:
         centralwidget->setObjectName("centralwidget");
         gridLayout = new QGridLayout(centralwidget);
         gridLayout->setObjectName("gridLayout");
-        gridLayout->setSizeConstraint(QLayout::SetDefaultConstraint);
+        gridLayout->setSizeConstraint(QLayout::SizeConstraint::SetDefaultConstraint);
         tabSteps = new QTabWidget(centralwidget);
         tabSteps->setObjectName("tabSteps");
         tabSteps->setEnabled(true);
         tabSteps->setMaximumSize(QSize(1920, 100));
-        tabSteps->setFocusPolicy(Qt::NoFocus);
+        tabSteps->setFocusPolicy(Qt::FocusPolicy::NoFocus);
         tabSteps->setAutoFillBackground(false);
-        tabSteps->setTabPosition(QTabWidget::North);
-        tabSteps->setTabShape(QTabWidget::Rounded);
-        tabSteps->setElideMode(Qt::ElideLeft);
+        tabSteps->setTabPosition(QTabWidget::TabPosition::North);
+        tabSteps->setTabShape(QTabWidget::TabShape::Rounded);
+        tabSteps->setElideMode(Qt::TextElideMode::ElideLeft);
         tabSteps->setDocumentMode(false);
         tabSteps->setTabsClosable(false);
         tabSteps->setTabBarAutoHide(false);
@@ -144,7 +144,7 @@ public:
         infoStep1->setObjectName("infoStep1");
         infoStep1->setEnabled(false);
         infoStep1->setGeometry(QRect(10, 40, 461, 24));
-        infoStep1->setFocusPolicy(Qt::NoFocus);
+        infoStep1->setFocusPolicy(Qt::FocusPolicy::NoFocus);
         labelStep1Center = new QLabel(Step1);
         labelStep1Center->setObjectName("labelStep1Center");
         labelStep1Center->setGeometry(QRect(630, 30, 141, 21));
@@ -152,20 +152,20 @@ public:
         pushButtonNext1->setObjectName("pushButtonNext1");
         pushButtonNext1->setGeometry(QRect(970, 30, 80, 24));
         pushButtonNext1->setTabletTracking(true);
-        pushButtonNext1->setFocusPolicy(Qt::TabFocus);
+        pushButtonNext1->setFocusPolicy(Qt::FocusPolicy::TabFocus);
         centerPointText = new QLineEdit(Step1);
         centerPointText->setObjectName("centerPointText");
         centerPointText->setEnabled(false);
         centerPointText->setGeometry(QRect(760, 30, 191, 24));
-        centerPointText->setFocusPolicy(Qt::NoFocus);
-        centerPointText->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
+        centerPointText->setFocusPolicy(Qt::FocusPolicy::NoFocus);
+        centerPointText->setAlignment(Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter);
         label_guide = new QLabel(Step1);
         label_guide->setObjectName("label_guide");
         label_guide->setGeometry(QRect(10, 10, 261, 16));
         label_guide_2 = new QLabel(Step1);
         label_guide_2->setObjectName("label_guide_2");
         label_guide_2->setGeometry(QRect(230, 10, 241, 20));
-        label_guide_2->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
+        label_guide_2->setAlignment(Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter);
         tabSteps->addTab(Step1, QString());
         Step2 = new QWidget();
         Step2->setObjectName("Step2");
@@ -173,16 +173,16 @@ public:
         pushButtonBack2 = new QPushButton(Step2);
         pushButtonBack2->setObjectName("pushButtonBack2");
         pushButtonBack2->setGeometry(QRect(880, 30, 80, 24));
-        pushButtonBack2->setFocusPolicy(Qt::TabFocus);
+        pushButtonBack2->setFocusPolicy(Qt::FocusPolicy::TabFocus);
         pushButtonNext2 = new QPushButton(Step2);
         pushButtonNext2->setObjectName("pushButtonNext2");
         pushButtonNext2->setEnabled(true);
         pushButtonNext2->setGeometry(QRect(970, 30, 80, 24));
-        pushButtonNext2->setFocusPolicy(Qt::TabFocus);
+        pushButtonNext2->setFocusPolicy(Qt::FocusPolicy::TabFocus);
         pushButtonGenerate2 = new QPushButton(Step2);
         pushButtonGenerate2->setObjectName("pushButtonGenerate2");
-        pushButtonGenerate2->setGeometry(QRect(410, 40, 111, 24));
-        pushButtonGenerate2->setFocusPolicy(Qt::TabFocus);
+        pushButtonGenerate2->setGeometry(QRect(390, 40, 131, 24));
+        pushButtonGenerate2->setFocusPolicy(Qt::FocusPolicy::TabFocus);
         progressBar = new QProgressBar(Step2);
         progressBar->setObjectName("progressBar");
         progressBar->setGeometry(QRect(10, 40, 241, 21));
@@ -191,20 +191,23 @@ public:
         infoStep2->setObjectName("infoStep2");
         infoStep2->setEnabled(false);
         infoStep2->setGeometry(QRect(10, 10, 241, 24));
-        infoStep2->setFocusPolicy(Qt::NoFocus);
+        infoStep2->setFocusPolicy(Qt::FocusPolicy::NoFocus);
         doubleSpinBoxWidth = new QDoubleSpinBox(Step2);
         doubleSpinBoxWidth->setObjectName("doubleSpinBoxWidth");
         doubleSpinBoxWidth->setEnabled(true);
-        doubleSpinBoxWidth->setGeometry(QRect(620, 10, 62, 25));
+        doubleSpinBoxWidth->setGeometry(QRect(610, 10, 71, 25));
+        QFont font;
+        font.setPointSize(7);
+        doubleSpinBoxWidth->setFont(font);
         doubleSpinBoxWidth->setMinimum(0.100000000000000);
         doubleSpinBoxWidth->setSingleStep(0.500000000000000);
         doubleSpinBoxWidth->setValue(1.500000000000000);
         label = new QLabel(Step2);
         label->setObjectName("label");
-        label->setGeometry(QRect(540, 10, 71, 16));
+        label->setGeometry(QRect(540, 10, 71, 21));
         label_2 = new QLabel(Step2);
         label_2->setObjectName("label_2");
-        label_2->setGeometry(QRect(710, 10, 81, 16));
+        label_2->setGeometry(QRect(690, 10, 81, 21));
         QPalette palette;
         QBrush brush(QColor(0, 170, 0, 255));
         brush.setStyle(Qt::SolidPattern);
@@ -218,7 +221,7 @@ public:
         label_2->setPalette(palette);
         label_3 = new QLabel(Step2);
         label_3->setObjectName("label_3");
-        label_3->setGeometry(QRect(710, 40, 81, 16));
+        label_3->setGeometry(QRect(690, 40, 81, 16));
         QPalette palette1;
         QBrush brush3(QColor(0, 0, 255, 255));
         brush3.setStyle(Qt::SolidPattern);
@@ -229,14 +232,16 @@ public:
         doubleSpinBoxTop = new QDoubleSpinBox(Step2);
         doubleSpinBoxTop->setObjectName("doubleSpinBoxTop");
         doubleSpinBoxTop->setEnabled(false);
-        doubleSpinBoxTop->setGeometry(QRect(800, 10, 62, 25));
+        doubleSpinBoxTop->setGeometry(QRect(771, 10, 91, 25));
+        doubleSpinBoxTop->setFont(font);
         doubleSpinBoxTop->setMinimum(-1000.000000000000000);
         doubleSpinBoxTop->setMaximum(1000.000000000000000);
         doubleSpinBoxTop->setSingleStep(1.000000000000000);
         doubleSpinBoxBottom = new QDoubleSpinBox(Step2);
         doubleSpinBoxBottom->setObjectName("doubleSpinBoxBottom");
         doubleSpinBoxBottom->setEnabled(false);
-        doubleSpinBoxBottom->setGeometry(QRect(800, 40, 62, 25));
+        doubleSpinBoxBottom->setGeometry(QRect(771, 40, 91, 25));
+        doubleSpinBoxBottom->setFont(font);
         doubleSpinBoxBottom->setMinimum(-1000.000000000000000);
         doubleSpinBoxBottom->setMaximum(1000.000000000000000);
         line = new QFrame(Step2);
@@ -248,10 +253,10 @@ public:
         comboBoxDirection->addItem(QString());
         comboBoxDirection->addItem(QString());
         comboBoxDirection->setObjectName("comboBoxDirection");
-        comboBoxDirection->setGeometry(QRect(410, 10, 111, 24));
-        QFont font;
-        font.setBold(false);
-        comboBoxDirection->setFont(font);
+        comboBoxDirection->setGeometry(QRect(390, 10, 131, 24));
+        QFont font1;
+        font1.setBold(false);
+        comboBoxDirection->setFont(font1);
         label_4 = new QLabel(Step2);
         label_4->setObjectName("label_4");
         label_4->setGeometry(QRect(270, 10, 141, 20));
@@ -272,24 +277,24 @@ public:
         pushButtonBack3 = new QPushButton(Step3);
         pushButtonBack3->setObjectName("pushButtonBack3");
         pushButtonBack3->setGeometry(QRect(880, 30, 80, 24));
-        pushButtonBack3->setFocusPolicy(Qt::TabFocus);
+        pushButtonBack3->setFocusPolicy(Qt::FocusPolicy::TabFocus);
         pushButtonSave3 = new QPushButton(Step3);
         pushButtonSave3->setObjectName("pushButtonSave3");
         pushButtonSave3->setGeometry(QRect(970, 30, 80, 24));
-        QFont font1;
-        font1.setBold(true);
-        pushButtonSave3->setFont(font1);
-        pushButtonSave3->setFocusPolicy(Qt::TabFocus);
+        QFont font2;
+        font2.setBold(true);
+        pushButtonSave3->setFont(font2);
+        pushButtonSave3->setFocusPolicy(Qt::FocusPolicy::TabFocus);
         checkBoxShowMesh = new QCheckBox(Step3);
         checkBoxShowMesh->setObjectName("checkBoxShowMesh");
         checkBoxShowMesh->setGeometry(QRect(20, 20, 121, 31));
-        checkBoxShowMesh->setFocusPolicy(Qt::TabFocus);
+        checkBoxShowMesh->setFocusPolicy(Qt::FocusPolicy::TabFocus);
         checkBoxShowMesh->setChecked(true);
         checkBoxShowMesh->setTristate(false);
         checkBoxShowPiece = new QCheckBox(Step3);
         checkBoxShowPiece->setObjectName("checkBoxShowPiece");
         checkBoxShowPiece->setGeometry(QRect(140, 20, 111, 31));
-        checkBoxShowPiece->setFocusPolicy(Qt::TabFocus);
+        checkBoxShowPiece->setFocusPolicy(Qt::FocusPolicy::TabFocus);
         checkBoxShowPiece->setChecked(true);
         checkBoxShowPiece->setTristate(false);
         tabSteps->addTab(Step3, QString());
@@ -340,7 +345,7 @@ public:
 
         retranslateUi(MainWindow);
 
-        tabSteps->setCurrentIndex(0);
+        tabSteps->setCurrentIndex(1);
 
 
         QMetaObject::connectSlotsByName(MainWindow);

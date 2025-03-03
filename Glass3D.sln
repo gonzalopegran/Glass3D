@@ -5,19 +5,43 @@ VisualStudioVersion = 17.7.34221.43
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Glass3D", "Glass3D.vcxproj", "{29206E4C-1975-3976-A75A-3612CBD73F39}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Instalador", "Instalador", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
+EndProject
+Project("{930C7802-8A8C-48F9-8165-68863BCCD9DD}") = "SetupGlass3D", "SetupGlass3D\SetupGlass3D.wixproj", "{6F642C33-94AB-40BE-A082-B914F24BF5BD}"
+	ProjectSection(ProjectDependencies) = postProject
+		{29206E4C-1975-3976-A75A-3612CBD73F39} = {29206E4C-1975-3976-A75A-3612CBD73F39}
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
 		Release|x64 = Release|x64
+		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{29206E4C-1975-3976-A75A-3612CBD73F39}.Debug|x64.ActiveCfg = Debug|x64
 		{29206E4C-1975-3976-A75A-3612CBD73F39}.Debug|x64.Build.0 = Debug|x64
+		{29206E4C-1975-3976-A75A-3612CBD73F39}.Debug|x86.ActiveCfg = Debug|x64
+		{29206E4C-1975-3976-A75A-3612CBD73F39}.Debug|x86.Build.0 = Debug|x64
 		{29206E4C-1975-3976-A75A-3612CBD73F39}.Release|x64.ActiveCfg = Release|x64
 		{29206E4C-1975-3976-A75A-3612CBD73F39}.Release|x64.Build.0 = Release|x64
+		{29206E4C-1975-3976-A75A-3612CBD73F39}.Release|x86.ActiveCfg = Release|x64
+		{29206E4C-1975-3976-A75A-3612CBD73F39}.Release|x86.Build.0 = Release|x64
+		{6F642C33-94AB-40BE-A082-B914F24BF5BD}.Debug|x64.ActiveCfg = Debug|x86
+		{6F642C33-94AB-40BE-A082-B914F24BF5BD}.Debug|x64.Build.0 = Debug|x86
+		{6F642C33-94AB-40BE-A082-B914F24BF5BD}.Debug|x86.ActiveCfg = Debug|x86
+		{6F642C33-94AB-40BE-A082-B914F24BF5BD}.Debug|x86.Build.0 = Debug|x86
+		{6F642C33-94AB-40BE-A082-B914F24BF5BD}.Release|x64.ActiveCfg = Release|x86
+		{6F642C33-94AB-40BE-A082-B914F24BF5BD}.Release|x64.Build.0 = Release|x86
+		{6F642C33-94AB-40BE-A082-B914F24BF5BD}.Release|x86.ActiveCfg = Release|x86
+		{6F642C33-94AB-40BE-A082-B914F24BF5BD}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{6F642C33-94AB-40BE-A082-B914F24BF5BD} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F62ED8EE-BBA9-4D65-9BB4-82C2A9ABAAB6}

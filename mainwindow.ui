@@ -28,7 +28,7 @@
   <widget class="QWidget" name="centralwidget">
    <layout class="QGridLayout" name="gridLayout">
     <property name="sizeConstraint">
-     <enum>QLayout::SetDefaultConstraint</enum>
+     <enum>QLayout::SizeConstraint::SetDefaultConstraint</enum>
     </property>
     <item row="0" column="0">
      <widget class="QTabWidget" name="tabSteps">
@@ -42,22 +42,22 @@
        </size>
       </property>
       <property name="focusPolicy">
-       <enum>Qt::NoFocus</enum>
+       <enum>Qt::FocusPolicy::NoFocus</enum>
       </property>
       <property name="autoFillBackground">
        <bool>false</bool>
       </property>
       <property name="tabPosition">
-       <enum>QTabWidget::North</enum>
+       <enum>QTabWidget::TabPosition::North</enum>
       </property>
       <property name="tabShape">
-       <enum>QTabWidget::Rounded</enum>
+       <enum>QTabWidget::TabShape::Rounded</enum>
       </property>
       <property name="currentIndex">
-       <number>0</number>
+       <number>1</number>
       </property>
       <property name="elideMode">
-       <enum>Qt::ElideLeft</enum>
+       <enum>Qt::TextElideMode::ElideLeft</enum>
       </property>
       <property name="documentMode">
        <bool>false</bool>
@@ -88,7 +88,7 @@
          </rect>
         </property>
         <property name="focusPolicy">
-         <enum>Qt::NoFocus</enum>
+         <enum>Qt::FocusPolicy::NoFocus</enum>
         </property>
         <property name="text">
          <string>Seleccione un punto del molde con clic derecho para generar el centro...</string>
@@ -120,7 +120,7 @@
          <bool>true</bool>
         </property>
         <property name="focusPolicy">
-         <enum>Qt::TabFocus</enum>
+         <enum>Qt::FocusPolicy::TabFocus</enum>
         </property>
         <property name="text">
          <string>&amp;Siguiente</string>
@@ -139,13 +139,13 @@
          </rect>
         </property>
         <property name="focusPolicy">
-         <enum>Qt::NoFocus</enum>
+         <enum>Qt::FocusPolicy::NoFocus</enum>
         </property>
         <property name="text">
          <string/>
         </property>
         <property name="alignment">
-         <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+         <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
         </property>
        </widget>
        <widget class="QLabel" name="label_guide">
@@ -174,7 +174,7 @@
          <string>Clic DER: Generar centro</string>
         </property>
         <property name="alignment">
-         <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+         <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
         </property>
        </widget>
       </widget>
@@ -198,7 +198,7 @@
          </rect>
         </property>
         <property name="focusPolicy">
-         <enum>Qt::TabFocus</enum>
+         <enum>Qt::FocusPolicy::TabFocus</enum>
         </property>
         <property name="text">
          <string>&amp;Volver</string>
@@ -217,7 +217,7 @@
          </rect>
         </property>
         <property name="focusPolicy">
-         <enum>Qt::TabFocus</enum>
+         <enum>Qt::FocusPolicy::TabFocus</enum>
         </property>
         <property name="toolTip">
          <string>Generación del positivo</string>
@@ -229,14 +229,14 @@
        <widget class="QPushButton" name="pushButtonGenerate2">
         <property name="geometry">
          <rect>
-          <x>410</x>
+          <x>390</x>
           <y>40</y>
-          <width>111</width>
+          <width>131</width>
           <height>24</height>
          </rect>
         </property>
         <property name="focusPolicy">
-         <enum>Qt::TabFocus</enum>
+         <enum>Qt::FocusPolicy::TabFocus</enum>
         </property>
         <property name="text">
          <string>&amp;Generar Preview</string>
@@ -268,7 +268,7 @@
          </rect>
         </property>
         <property name="focusPolicy">
-         <enum>Qt::NoFocus</enum>
+         <enum>Qt::FocusPolicy::NoFocus</enum>
         </property>
         <property name="text">
          <string/>
@@ -280,11 +280,16 @@
         </property>
         <property name="geometry">
          <rect>
-          <x>620</x>
+          <x>610</x>
           <y>10</y>
-          <width>62</width>
+          <width>71</width>
           <height>25</height>
          </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>7</pointsize>
+         </font>
         </property>
         <property name="minimum">
          <double>0.100000000000000</double>
@@ -302,7 +307,7 @@
           <x>540</x>
           <y>10</y>
           <width>71</width>
-          <height>16</height>
+          <height>21</height>
          </rect>
         </property>
         <property name="text">
@@ -312,10 +317,10 @@
        <widget class="QLabel" name="label_2">
         <property name="geometry">
          <rect>
-          <x>710</x>
+          <x>690</x>
           <y>10</y>
           <width>81</width>
-          <height>16</height>
+          <height>21</height>
          </rect>
         </property>
         <property name="palette">
@@ -362,7 +367,7 @@
        <widget class="QLabel" name="label_3">
         <property name="geometry">
          <rect>
-          <x>710</x>
+          <x>690</x>
           <y>40</y>
           <width>81</width>
           <height>16</height>
@@ -415,11 +420,16 @@
         </property>
         <property name="geometry">
          <rect>
-          <x>800</x>
+          <x>771</x>
           <y>10</y>
-          <width>62</width>
+          <width>91</width>
           <height>25</height>
          </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>7</pointsize>
+         </font>
         </property>
         <property name="minimum">
          <double>-1000.000000000000000</double>
@@ -437,11 +447,16 @@
         </property>
         <property name="geometry">
          <rect>
-          <x>800</x>
+          <x>771</x>
           <y>40</y>
-          <width>62</width>
+          <width>91</width>
           <height>25</height>
          </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>7</pointsize>
+         </font>
         </property>
         <property name="minimum">
          <double>-1000.000000000000000</double>
@@ -460,15 +475,15 @@
          </rect>
         </property>
         <property name="orientation">
-         <enum>Qt::Vertical</enum>
+         <enum>Qt::Orientation::Vertical</enum>
         </property>
        </widget>
        <widget class="QComboBox" name="comboBoxDirection">
         <property name="geometry">
          <rect>
-          <x>410</x>
+          <x>390</x>
           <y>10</y>
-          <width>111</width>
+          <width>131</width>
           <height>24</height>
          </rect>
         </property>
@@ -511,7 +526,7 @@
          </rect>
         </property>
         <property name="orientation">
-         <enum>Qt::Vertical</enum>
+         <enum>Qt::Orientation::Vertical</enum>
         </property>
        </widget>
        <widget class="Line" name="line_3">
@@ -524,7 +539,7 @@
          </rect>
         </property>
         <property name="orientation">
-         <enum>Qt::Vertical</enum>
+         <enum>Qt::Orientation::Vertical</enum>
         </property>
        </widget>
       </widget>
@@ -545,7 +560,7 @@
          </rect>
         </property>
         <property name="focusPolicy">
-         <enum>Qt::TabFocus</enum>
+         <enum>Qt::FocusPolicy::TabFocus</enum>
         </property>
         <property name="text">
          <string>&amp;Volver</string>
@@ -566,7 +581,7 @@
          </font>
         </property>
         <property name="focusPolicy">
-         <enum>Qt::TabFocus</enum>
+         <enum>Qt::FocusPolicy::TabFocus</enum>
         </property>
         <property name="text">
          <string>&amp;Guardar</string>
@@ -582,7 +597,7 @@
          </rect>
         </property>
         <property name="focusPolicy">
-         <enum>Qt::TabFocus</enum>
+         <enum>Qt::FocusPolicy::TabFocus</enum>
         </property>
         <property name="text">
          <string>Ver &amp;Molde</string>
@@ -604,7 +619,7 @@
          </rect>
         </property>
         <property name="focusPolicy">
-         <enum>Qt::TabFocus</enum>
+         <enum>Qt::FocusPolicy::TabFocus</enum>
         </property>
         <property name="text">
          <string>Ver &amp;Pieza</string>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+	<Product Id="{6735927D-AFB5-406E-8060-DA49E85B9375}" 
+			 Name="Glass3D" 
+			 Language="1033" 
+			 Version="1.0.0.1" 
+			 Manufacturer="Gonzalo Lopez Perez" 
+			 UpgradeCode="ac2b25cb-db04-4d26-9b9b-ab1f71044fad">
+		
+		<Package InstallerVersion="200" 
+				 Compressed="yes"
+				 InstallScope="perMachine" />
+
+		<MajorUpgrade DowngradeErrorMessage="A newer version of [ProductName] is already installed." />
+		<Media Id="1" Cabinet="Setup.cab" EmbedCab="yes" />
+		<Property Id="ARPPRODUCTICON" Value="Glass3D.ico" />
+
+		<Feature Id="Complete" Level="1">
+			<Feature Id="MainProgram" Title="Glass3D" Level="1">
+				<ComponentGroupRef Id="Glass3DBinaries" />
+				<ComponentGroupRef Id="QtDeployFiles" />
+			</Feature>
+		</Feature>
+
+		<Icon Id="Glass3D.ico" SourceFile="..\logo_glass3d.ico" />
+
+
+		<Directory Id="TARGETDIR" Name="SourceDir">
+			<Directory Id="ProgramFilesFolder">
+				<Directory Id="INSTALLFOLDER" Name="Glass3D" >
+					<Directory Id="EXAMPLESDIR" Name="ejemplos" />
+					<Directory Id="GUIDESDIR" Name="manuales" />
+					<Directory Id="Glass3D.Content" />
+				</Directory>
+			</Directory>
+		</Directory>
+		
+		
+		<Property Id="WIXUI_INSTALLDIR" Value="INSTALLFOLDER" />
+		<Property Id="appName" Value="Glass3D" />
+
+		<UI Id="MyWixUI">
+			<UIRef Id="WixUI_InstallDir" />
+			<Publish Dialog="WelcomeDlg" Control="Next" Event="NewDialog" Value="InstallDirDlg">1</Publish>
+			<Publish Dialog="InstallDirDlg" Control="Back" Event="NewDialog" Value="WelcomeDlg">1</Publish>
+		</UI>
+		<UIRef Id="WixUI_ErrorProgressText" />
+	</Product>
+	
+	<Fragment>
+		<ComponentGroup Id="ProductComponents" Directory="INSTALLFOLDER">
+			 <Component Id="ProductComponent" Guid="{312B8215-07DA-4C3E-8836-8F344C71EC3A}">
+				 <File Id="Glass3D" Name="Glass3D.exe" DiskId="1" Source="..\release\Glass3D.exe" />
+				 <File Id="configFile" Name="cfg_Glass3D.ini" DiskId="1" Source="..\cfg_Glass3D.ini" />
+				 
+				 
+			 </Component> 
+		</ComponentGroup>
+	</Fragment>
+
+	<Fragment>
+		<DirectoryRef Id="EXAMPLESDIR">
+			<Component Id="ExampleFiles" Guid="{ABCB37D3-EB10-4099-93DF-85A89F8A187A}">
+				<File Source="..\Ejemplos\Simple.stl" />
+				<File Source="..\Ejemplos\Curvo.stl" />
+				<File Source="..\Ejemplos\SinBase.stl" />
+			</Component>
+		</DirectoryRef>
+	</Fragment>
+</Wix>

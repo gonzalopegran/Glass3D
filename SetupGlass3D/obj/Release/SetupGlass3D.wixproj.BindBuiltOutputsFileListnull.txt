@@ -1,0 +1,2 @@
+C:\Users\gonza\Repositorio\Glass3D\SetupGlass3D\bin\Release\SetupGlass3D.msi
+C:\Users\gonza\Repositorio\Glass3D\SetupGlass3D\bin\Release\SetupGlass3D.wixpdb
