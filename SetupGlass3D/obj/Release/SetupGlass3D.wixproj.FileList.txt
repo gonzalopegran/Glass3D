@@ -1,0 +1,7 @@
+C:\Users\gonza\Repositorio\Glass3D\SetupGlass3D\bin\Release\SetupGlass3D.msi
+C:\Users\gonza\Repositorio\Glass3D\SetupGlass3D\bin\Release\SetupGlass3D.wixpdb
+obj\Release\Binaries.wixobj
+obj\Release\Product.wixobj
+obj\Release\SetupGlass3D.wixproj.BindContentsFileListnull.txt
+obj\Release\SetupGlass3D.wixproj.BindOutputsFileListnull.txt
+obj\Release\SetupGlass3D.wixproj.BindBuiltOutputsFileListnull.txt

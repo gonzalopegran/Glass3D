@@ -40,12 +40,18 @@
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <Import Project="$(QtMsBuild)\qt_defaults.props" Condition="Exists('$(QtMsBuild)\qt_defaults.props')" />
   <PropertyGroup Label="QtSettings" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <QtInstall>6.7.0_msvc2019_64</QtInstall>
-    <QtModules>core;opengl;network;gui;widgets;concurrent</QtModules>
+    <QtInstall>6.7.1_msvc2019_64</QtInstall>
+    <QtModules>core;gui;widgets;3dcore;3dextras;3drender;3dinput;3dlogic</QtModules>
+    <QtPlugin>false</QtPlugin>
+    <QtDeploy>true</QtDeploy>
+    <QtDeployPdb>true</QtDeployPdb>
   </PropertyGroup>
   <PropertyGroup Label="QtSettings" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <QtInstall>6.7.0_msvc2019_64</QtInstall>
-    <QtModules>core;gui;widgets;3dcore;3dextras;3dinput;3dlogic;3drender</QtModules>
+    <QtInstall>6.7.1_msvc2019_64</QtInstall>
+    <QtModules>core;gui;widgets;3dcore;3dextras;3drender;3dinput;3dlogic</QtModules>
+    <QtPlugin>true</QtPlugin>
+    <QtDeploy>true</QtDeploy>
+    <QtDeployPdb>true</QtDeployPdb>
   </PropertyGroup>
   <Target Name="QtMsBuildNotFound" BeforeTargets="CustomBuild;ClCompile" Condition="!Exists('$(QtMsBuild)\qt.targets') OR !Exists('$(QtMsBuild)\Qt.props')">
     <Message Importance="High" Text="QtMsBuild: could not locate qt.targets, qt.props; project may not build correctly." />
@@ -71,9 +77,12 @@
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Glass3D</TargetName>
     <IgnoreImportLibrary Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</IgnoreImportLibrary>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <PublicIncludeDirectories>C:\Qt\6.7.1\msvc2019_64\include</PublicIncludeDirectories>
+  </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>GeneratedFiles\$(ConfigurationName);GeneratedFiles;.;release;/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>GeneratedFiles\$(ConfigurationName);GeneratedFiles;.;release;/include;C:\Qt\6.7.1\msvc2019_64\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalOptions>-Zc:rvalueCast -Zc:inline -Zc:strictStrings -Zc:throwingNew -permissive- -Zc:__cplusplus -Zc:externConstexpr -utf-8 -w34100 -w34189 -w44996 -w44456 -w44457 -w44458 %(AdditionalOptions)</AdditionalOptions>
       <AssemblerListingLocation>release\</AssemblerListingLocation>
       <BrowseInformation>false</BrowseInformation>

@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'settings.ui'
 **
-** Created by: Qt User Interface Compiler version 6.7.0
+** Created by: Qt User Interface Compiler version 6.7.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -49,8 +49,8 @@ public:
         buttonBox = new QDialogButtonBox(Settings);
         buttonBox->setObjectName("buttonBox");
         buttonBox->setGeometry(QRect(190, 260, 191, 32));
-        buttonBox->setOrientation(Qt::Horizontal);
-        buttonBox->setStandardButtons(QDialogButtonBox::Cancel|QDialogButtonBox::Ok);
+        buttonBox->setOrientation(Qt::Orientation::Horizontal);
+        buttonBox->setStandardButtons(QDialogButtonBox::StandardButton::Cancel|QDialogButtonBox::StandardButton::Ok);
         buttonBox->setCenterButtons(false);
         labelDefaults = new QLabel(Settings);
         labelDefaults->setObjectName("labelDefaults");
@@ -63,7 +63,7 @@ public:
         labelWidth->setGeometry(QRect(50, 50, 151, 16));
         doubleSpinBoxWidth = new QDoubleSpinBox(Settings);
         doubleSpinBoxWidth->setObjectName("doubleSpinBoxWidth");
-        doubleSpinBoxWidth->setGeometry(QRect(200, 50, 62, 25));
+        doubleSpinBoxWidth->setGeometry(QRect(200, 50, 111, 25));
         doubleSpinBoxWidth->setMinimum(0.050000000000000);
         doubleSpinBoxWidth->setSingleStep(0.500000000000000);
         doubleSpinBoxWidth->setValue(1.500000000000000);
@@ -74,7 +74,7 @@ public:
         comboBoxDirection->addItem(QString());
         comboBoxDirection->addItem(QString());
         comboBoxDirection->setObjectName("comboBoxDirection");
-        comboBoxDirection->setGeometry(QRect(200, 80, 111, 24));
+        comboBoxDirection->setGeometry(QRect(200, 80, 171, 24));
         QFont font1;
         font1.setBold(false);
         comboBoxDirection->setFont(font1);
@@ -90,14 +90,14 @@ public:
         labelGeneration->setGeometry(QRect(50, 220, 221, 16));
         spinBoxScans = new QSpinBox(Settings);
         spinBoxScans->setObjectName("spinBoxScans");
-        spinBoxScans->setGeometry(QRect(280, 190, 91, 25));
+        spinBoxScans->setGeometry(QRect(270, 190, 101, 25));
         spinBoxScans->setMinimum(50);
         spinBoxScans->setMaximum(2000);
         spinBoxScans->setSingleStep(10);
         spinBoxScans->setValue(400);
         spinBoxGeneration = new QSpinBox(Settings);
         spinBoxGeneration->setObjectName("spinBoxGeneration");
-        spinBoxGeneration->setGeometry(QRect(280, 220, 91, 25));
+        spinBoxGeneration->setGeometry(QRect(270, 220, 101, 25));
         spinBoxGeneration->setMinimum(20);
         spinBoxGeneration->setMaximum(500);
         spinBoxGeneration->setSingleStep(10);
